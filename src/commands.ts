@@ -13,20 +13,20 @@ export default (editor: grapesjs.Editor, opts: Required<PluginOptions>) => {
     openExportCommand(editor, opts);
     tglImagesCommand(editor, opts);
 
-    Commands.add(cmdDeviceDesktop, {
-      run: (ed) => ed.setDevice('Desktop'),
-      stop: () => {},
-    });
+    // Commands.add(cmdDeviceDesktop, {
+    //   run: (ed) => ed.setDevice('Desktop'),
+    //   stop: () => {},
+    // });
 
-    Commands.add(cmdDeviceTablet, {
-      run: (ed) => ed.setDevice('Tablet'),
-      stop: () => {},
-    });
+    // Commands.add(cmdDeviceTablet, {
+    //   run: (ed) => ed.setDevice('Tablet'),
+    //   stop: () => {},
+    // });
 
-    Commands.add(cmdDeviceMobile, {
-      run: (ed) => ed.setDevice('Mobile portrait'),
-      stop: () => {},
-    });
+    // Commands.add(cmdDeviceMobile, {
+    //   run: (ed) => ed.setDevice('Mobile portrait'),
+    //   stop: () => {},
+    // });
 
     Commands.add(cmdClear, {
       run: (ed) => {

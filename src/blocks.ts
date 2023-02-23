@@ -83,14 +83,6 @@ export default function(editor: grapesjs.Editor, opts: Required<PluginOptions>) 
     `,
   });
 
-  addBlock('button', {
-    label: 'Button',
-    media: `<svg viewBox="0 0 24 24">
-        <path fill="currentColor" d="M20 20.5C20 21.3 19.3 22 18.5 22H13C12.6 22 12.3 21.9 12 21.6L8 17.4L8.7 16.6C8.9 16.4 9.2 16.3 9.5 16.3H9.7L12 18V9C12 8.4 12.4 8 13 8S14 8.4 14 9V13.5L15.2 13.6L19.1 15.8C19.6 16 20 16.6 20 17.1V20.5M20 2H4C2.9 2 2 2.9 2 4V12C2 13.1 2.9 14 4 14H8V12H4V4H20V12H18V14H20C21.1 14 22 13.1 22 12V4C22 2.9 21.1 2 20 2Z" />
-    </svg>`,
-    content: '<a class="button">Button</a>',
-  });
-
   addBlock('divider', {
     label: 'Divider',
     media: `<svg viewBox="0 0 24 24">
@@ -147,102 +139,5 @@ export default function(editor: grapesjs.Editor, opts: Required<PluginOptions>) 
       type:'image',
       style: { color:'black' },
     },
-  });
-
-  addBlock('quote', {
-    label: 'Quote',
-    media: `<svg viewBox="0 0 24 24">
-        <path fill="currentColor" d="M14,17H17L19,13V7H13V13H16M6,17H9L11,13V7H5V13H8L6,17Z" />
-    </svg>`,
-    content: '<blockquote class="quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ipsum dolor sit</blockquote>',
-  });
-
-  addBlock('link', {
-    label: 'Link',
-    media: `<svg viewBox="0 0 24 24">
-      <path fill="currentColor" d="M3.9,12C3.9,10.29 5.29,8.9 7,8.9H11V7H7A5,5 0 0,0 2,12A5,5 0 0,0 7,17H11V15.1H7C5.29,15.1 3.9,13.71 3.9,12M8,13H16V11H8V13M17,7H13V8.9H17C18.71,8.9 20.1,10.29 20.1,12C20.1,13.71 18.71,15.1 17,15.1H13V17H17A5,5 0 0,0 22,12A5,5 0 0,0 17,7Z"></path>
-    </svg>`,
-    content: {
-      type: 'link',
-      content: 'Link',
-      style: { color:'#3b97e3' }
-    },
-  });
-
-  addBlock('link-block', {
-    label: 'Link Block',
-    media: `<svg viewBox="0 0 24 24">
-      <path fill="currentColor" d="M3.9,12C3.9,10.29 5.29,8.9 7,8.9H11V7H7A5,5 0 0,0 2,12A5,5 0 0,0 7,17H11V15.1H7C5.29,15.1 3.9,13.71 3.9,12M8,13H16V11H8V13M17,7H13V8.9H17C18.71,8.9 20.1,10.29 20.1,12C20.1,13.71 18.71,15.1 17,15.1H13V17H17A5,5 0 0,0 22,12A5,5 0 0,0 17,7Z"></path>
-    </svg>`,
-    content: {
-      type: 'link',
-      editable: false,
-      droppable: true,
-      style: {
-        display: 'inline-block',
-        padding: '5px',
-        'min-height': '50px',
-        'min-width': '50px'
-      }
-    },
-  });
-
-  const gridItem =
-    `<table class="grid-item-card">
-      <tr>
-        <td class="grid-item-card-cell">
-          <img class="grid-item-image" src="https://via.placeholder.com/250x150/78c5d6/fff/" alt="Image"/>
-          <table class="grid-item-card-body">
-            <tr>
-              <td class="grid-item-card-content">
-                <h1 class="card-title">Title here</h1>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-    </table>`;
-
-  addBlock('grid-items', {
-    label: 'Grid Items',
-    media: `<svg viewBox="0 0 24 24">
-      <path fill="currentColor" d="M3,11H11V3H3M3,21H11V13H3M13,21H21V13H13M13,3V11H21V3"/>
-    </svg>`,
-    content: `
-      <table class="grid-item-row">
-        <tr>
-          <td class="grid-item-cell2-l">${gridItem}</td>
-          <td class="grid-item-cell2-r">${gridItem}</td>
-        </tr>
-      </table>
-    `,
-  });
-
-  const listItem =
-    `<table class="list-item">
-      <tr>
-        <td class="list-item-cell">
-          <table class="list-item-content">
-            <tr class="list-item-row">
-              <td class="list-cell-left">
-                <img class="list-item-image" src="https://via.placeholder.com/150/78c5d6/fff" alt="Image"/>
-              </td>
-              <td class="list-cell-right">
-                <h1 class="card-title">Title here</h1>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
-              </td>
-            </tr>
-          </table>
-        </td>
-      </tr>
-    </table>`;
-
-  addBlock('list-items', {
-    label: 'List Items',
-    media: `<svg viewBox="0 0 24 24">
-      <path fill="currentColor" d="M2 14H8V20H2M16 8H10V10H16M2 10H8V4H2M10 4V6H22V4M10 20H16V18H10M10 16H22V14H10"/>
-    </svg>`,
-    content: listItem + listItem,
   });
 };

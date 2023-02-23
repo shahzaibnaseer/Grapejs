@@ -137,7 +137,7 @@ const plugin: grapesjs.Plugin<PluginOptions> = (editor, opts: Partial<PluginOpti
   let config = editor.getConfig();
 
   const options: RequiredPluginOptions = {
-    blocks: ['sect100', 'sect50', 'sect30', 'sect37', 'button', 'divider', 'text', 'text-sect', 'image', 'quote', 'link', 'link-block', 'grid-items', 'list-items'],
+    blocks: ['Hello', 'sect100', 'sect50', 'sect30', 'sect37', 'divider', 'text', 'text-sect', 'image'],
     block: () => ({}),
     juiceOpts: {},
     cmdOpenImport: 'gjs-open-import-template',
@@ -174,8 +174,8 @@ const plugin: grapesjs.Plugin<PluginOptions> = (editor, opts: Partial<PluginOpti
   config.devicePreviewMode = true;
 
   if (options.useCustomTheme && typeof window !== 'undefined') {
-    const primaryColor = '#373d49';
-    const secondaryColor = '#dae5e6';
+    const primaryColor = '#0178bc';
+    const secondaryColor = '#ffffff';
     const tertiaryColor = '#4c9790';
     const quaternaryColor = '#35d7bb';
     const prefix = 'gjs-';
