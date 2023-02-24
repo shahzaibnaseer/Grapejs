@@ -19,33 +19,31 @@ export default (editor: grapesjs.Editor, opts: Required<PluginOptions>) => {
   editor.getConfig().showDevices = false;
 
   Panels.getPanels().reset([
-    // {
-    //   id: 'commands',
-    //   buttons: [{}],
-    // },
-    // {
-    //   id: 'devices-c',
-    //   buttons: [{
-    //     id: cmdDeviceDesktop,
-    //     command: cmdDeviceDesktop,
-    //     active: true,
-    //     label: `<svg ${iconStyle} viewBox="0 0 24 24">
-    //         <path fill="currentColor" d="M21,16H3V4H21M21,2H3C1.89,2 1,2.89 1,4V16A2,2 0 0,0 3,18H10V20H8V22H16V20H14V18H21A2,2 0 0,0 23,16V4C23,2.89 22.1,2 21,2Z" />
-    //     </svg>`
-    //   }, {
-    //     id: cmdDeviceTablet,
-    //     command: cmdDeviceTablet,
-    //     label: `<svg ${iconStyle} viewBox="0 0 24 24">
-    //         <path fill="currentColor" d="M19,18H5V6H19M21,4H3C1.89,4 1,4.89 1,6V18A2,2 0 0,0 3,20H21A2,2 0 0,0 23,18V6C23,4.89 22.1,4 21,4Z" />
-    //     </svg>`
-    //   }, {
-    //     id: cmdDeviceMobile,
-    //     command: cmdDeviceMobile,
-    //     label: `<svg ${iconStyle} viewBox="0 0 24 24">
-    //         <path fill="currentColor" d="M17,19H7V5H17M17,1H7C5.89,1 5,1.89 5,3V21A2,2 0 0,0 7,23H17A2,2 0 0,0 19,21V3C19,1.89 18.1,1 17,1Z" />
-    //     </svg>`
-    //   }]
-    // },
+    {
+      id: 'commands',
+      buttons: [{}],
+    },
+    {
+      id: 'devices-c',
+      buttons: [{
+        id: cmdDeviceDesktop,
+        command: cmdDeviceDesktop,
+        active: true,
+        label: `A3 Page`
+      }, {
+        id: cmdDeviceTablet,
+        command: cmdDeviceTablet,
+        label: `A4 Page`
+      }
+      // , {
+      //   id: cmdDeviceMobile,
+      //   command: cmdDeviceMobile,
+      //   label: `<svg ${iconStyle} viewBox="0 0 24 24">
+      //       <path fill="currentColor" d="M17,19H7V5H17M17,1H7C5.89,1 5,1.89 5,3V21A2,2 0 0,0 7,23H17A2,2 0 0,0 19,21V3C19,1.89 18.1,1 17,1Z" />
+      //   </svg>`
+      // }
+    ]
+    },
     {
       id: 'options',
       buttons: [{
@@ -73,16 +71,14 @@ export default (editor: grapesjs.Editor, opts: Required<PluginOptions>) => {
         label: `<svg ${iconStyle} viewBox="0 0 24 24">
             <path fill="currentColor" d="M12.89,3L14.85,3.4L11.11,21L9.15,20.6L12.89,3M19.59,12L16,8.41V5.58L22.42,12L16,18.41V15.58L19.59,12M1.58,12L8,5.58V8.41L4.41,12L8,15.58V18.41L1.58,12Z" />
         </svg>`
-      }, 
-      // {
-      //   id: cmdOpenImport,
-      //   command: cmdOpenImport,
-      //   label: `<svg ${iconStyle} viewBox="0 0 24 24">
+      }, {
+        id: cmdOpenImport,
+        command: cmdOpenImport,
+        label: `<svg ${iconStyle} viewBox="0 0 24 24">
 
-      //       <path fill="currentColor" d="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z" />
-      //   </svg>`,
-      // }, 
-      {
+            <path fill="currentColor" d="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z" />
+        </svg>`,
+      }, {
         id: cmdTglImages,
         command: cmdTglImages,
         label: `<svg ${iconStyle} viewBox="0 0 24 24">
